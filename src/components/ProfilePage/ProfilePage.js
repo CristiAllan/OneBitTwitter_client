@@ -3,6 +3,7 @@ import { Row, Col } from 'react-materialize';
 import MainLayout from '../MainLayout';
 import UserInfoContainer from '../../containers/UserInfoContainer/UserInfoContainer';
 import TweetListContainer from '../../containers/TweetListContainer/TweetListContainer';
+import TrendingTopicsContainer from '../../containers/TrendingTopicsContainer/TrendingTopicsContainer';
 
 const ProfilePage = () => (
   <MainLayout>
@@ -16,7 +17,7 @@ const ProfilePage = () => (
       </Col>
 
       <Col s={12} m={3}>
-        Trending Topics
+        <TrendingTopicsContainer />
       </Col>
     </Row>
   </MainLayout>
