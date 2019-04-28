@@ -1,6 +1,15 @@
+import React from 'react';
+import axios from 'axios';
+import { Toast } from 'react-materialize';
+import { UPDATE_TRENDINGS } from './constants';
+
 export function getHashtags() {
-  console.log('E ai Programador(a)')
-  return {
-    type: 'UPDATE_TRENDINGS'
+  const request = axios.get(process.env.REACT_APP_API + '/trending');
+
+  return (dispatch) => {
+    request.then(
+      resp => dispatch({ type: UPDATE_TRENDINGS, payload: resp.data }),
+      error => console.log('Failed to download trendings')
+    );
   };
 }
