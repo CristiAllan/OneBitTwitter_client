@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
-import TrendingTopics from '../../components/TrendingTopics/TrendingTopics'
+import TrendingTopics from '../../components/TrendingTopics/TrendingTopics';
+import { connect } from 'react-redux';
 
 class TrendingTopicsContainer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      hashtags: []
-    }
-  }
-
-  componentDidMount() {
-    this.setState({
-      hashtags: [['#OneBitCode', '10k'], ['#RubyOnRails', '10k']]
-    })
-  }
-
   render() {
     return (
-      <TrendingTopics hashtags={this.state.hashtags} />
+      <TrendingTopics hashtags={this.props.hashtags} />
     );
   }
 }
 
-export default TrendingTopicsContainer;
+function mapStateToProps(state) {
+  return {
+    hashtags: state.trendings.hashtags
+  }
+};
+
+export default connect(mapStateToProps)(TrendingTopicsContainer);
