@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TrendingTopics from '../../components/TrendingTopics/TrendingTopics'
-import photo from '../../images/fake_avatar.png';
 
 class TrendingTopicsContainer extends Component {
   constructor(props) {
