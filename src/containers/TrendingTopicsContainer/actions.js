@@ -1,6 +1,4 @@
-import React from 'react';
 import axios from 'axios';
-import { Toast } from 'react-materialize';
 import { UPDATE_TRENDINGS } from './constants';
 
 export function getHashtags() {
