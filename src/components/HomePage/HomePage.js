@@ -6,8 +6,8 @@ import background from '../../images/background.png';
 import styled from 'styled-components';
 
 const BackgroundBlue = styled.div`
-  background-color: #75d3f4;
-  height: 100% !important;
+  background: #75d3f4;
+  height: 100vh !important;
   margin: 0px;
   padding: 0px;
 `;
